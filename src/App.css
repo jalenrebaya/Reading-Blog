@@ -1,0 +1,295 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f5f0e8;
+  color: #29231f;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+  background: #29231f;
+  color: #f5f0e8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header h1 {
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+.header nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header nav a {
+  color: #f5f0e8;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* MAIN */
+
+main {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* LABEL */
+
+.label {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #8b5e3c;
+  margin-bottom: 25px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 90vh;
+  padding: 120px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #29231f;
+}
+
+.hero h2 {
+  font-size: clamp(55px, 10vw, 110px);
+  line-height: 0.9;
+  letter-spacing: -4px;
+  margin-bottom: 35px;
+}
+
+.intro {
+  max-width: 650px;
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.hero-link {
+  display: inline-block;
+  width: fit-content;
+  background: #29231f;
+  color: #f5f0e8;
+  text-decoration: none;
+  padding: 15px 25px;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.hero-link:hover {
+  background: #8b5e3c;
+}
+
+/* BLOG */
+
+.blog {
+  padding: 100px 8%;
+  border-bottom: 1px solid #29231f;
+}
+
+.blog > h2 {
+  font-size: 60px;
+  margin-bottom: 50px;
+  letter-spacing: -2px;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.post {
+  border-top: 2px solid #29231f;
+  padding: 35px 0;
+  max-width: 750px;
+}
+
+.post:last-child {
+  border-bottom: 1px solid #29231f;
+}
+
+.post .date {
+  color: #8b5e3c;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.post h3 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.post > p:not(.date) {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.post a {
+  color: #29231f;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.post a:hover {
+  color: #8b5e3c;
+}
+
+/* ARTICLE */
+
+.article-page {
+  max-width: 850px;
+  margin: auto;
+  padding: 100px 8%;
+}
+
+.article-page h1 {
+  font-size: clamp(50px, 8vw, 85px);
+  line-height: 0.95;
+  letter-spacing: -3px;
+  margin-bottom: 20px;
+}
+
+.article-date {
+  color: #8b5e3c;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+.article-content {
+  border-top: 1px solid #29231f;
+  padding-top: 40px;
+}
+
+.article-content p {
+  font-size: 19px;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #29231f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #8b5e3c;
+}
+
+/* ABOUT */
+
+.about {
+  padding: 100px 8%;
+  border-bottom: 1px solid #29231f;
+}
+
+.about h2 {
+  font-size: clamp(45px, 7vw, 75px);
+  margin-bottom: 35px;
+}
+
+.about p:not(.label) {
+  max-width: 750px;
+  font-size: 19px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #29231f;
+  color: #f5f0e8;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .header nav {
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 80px 25px;
+  }
+
+  .hero h2 {
+    font-size: 55px;
+    letter-spacing: -2px;
+  }
+
+  .blog {
+    padding: 70px 25px;
+  }
+
+  .blog > h2 {
+    font-size: 45px;
+  }
+
+  .post h3 {
+    font-size: 30px;
+  }
+
+  .article-page {
+    padding: 70px 25px;
+  }
+
+  .article-page h1 {
+    font-size: 50px;
+  }
+
+  .article-content p {
+    font-size: 17px;
+  }
+
+  .about {
+    padding: 70px 25px;
+  }
+}
